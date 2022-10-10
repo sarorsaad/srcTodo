@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>
+        {% block title %}
+
+        {% endblock title  %}
+    </title>
+</head>
+
+<body>
+<div class="maindiv">
+{% block body %}
+
+{% endblock body  %}
+</div>
+</body>
+</html>

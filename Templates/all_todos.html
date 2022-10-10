@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+All To-Dos
+{% endblock title %}
+
+{% block body %}
+<ul class="list-group" >
+    {% for todo in object_list %}
+    <li class="list-group-item" style="background-color:rgba(255,255,255,0.4);"><h3>{{todo.text|slice:50}}</h3><a href="/todo/{{todo.id}}">View Item</a> </li>
+    {% endfor %}
+</ul>
+{% include 'pagination.html' %}
+{% endblock body %}
